@@ -5,12 +5,12 @@ canvas.height = window.innerHeight;
 
 let neurons = [];
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 60; i++) {
   neurons.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.5,
-    vy: (Math.random() - 0.5) * 0.5
+    vx: (Math.random() - 0.5) * 0.3,
+    vy: (Math.random() - 0.5) * 0.3
   });
 }
 
@@ -47,13 +47,15 @@ function draw() {
 }
 
 canvas.addEventListener('mousemove', e => {
-  neurons.push({
-    x: e.clientX,
-    y: e.clientY,
-    vx: (Math.random() - 0.5) * 1,
-    vy: (Math.random() - 0.5) * 1
-  });
-  if (neurons.length > 150) neurons.shift();
+  if (Math.random() < 0.05) {
+    neurons.push({
+      x: e.clientX,
+      y: e.clientY,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5
+    });
+    if (neurons.length > 100) neurons.shift();
+  }
 });
 
 canvas.addEventListener('click', e => {

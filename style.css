@@ -5,6 +5,12 @@ body, html {
   font-family: 'Orbitron', sans-serif;
   background: black;
   color: #00ffe7;
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif;
 }
 
 canvas {
@@ -34,4 +40,37 @@ button {
 button:hover {
   background: #00ffe7;
   color: black;
+}
+.posts {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.post {
+  margin-bottom: 60px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ffe7;
+  padding: 20px;
+  border-radius: 10px;
+  color: #00ffe7;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.post img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.post p {
+  font-size: 1.1em;
+  line-height: 1.6;
 }
