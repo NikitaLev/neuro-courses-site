@@ -1,4 +1,4 @@
 {
-  "github-pages.deploy.branch": "gh-pages",
+  "github-pages.deploy.branch": "main",
   "github-pages.deploy.folder": "./"
 }
