@@ -1,16 +1,11 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: black;
-  color: #00ffe7;
-  height: 100%;
-  overflow-y: auto;
-}
-
-body {
-  font-family: 'Orbitron', sans-serif;
+  color: #e0e0e0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 canvas {
@@ -20,27 +15,40 @@ canvas {
   z-index: 0;
 }
 
-.content {
+.hero {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding-top: 20vh;
+  padding: 100px 20px 60px;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
 }
 
-button {
-  background: transparent;
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.cta {
+  display: inline-block;
+  padding: 12px 24px;
   border: 2px solid #00ffe7;
   color: #00ffe7;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-button:hover {
+.cta:hover {
   background: #00ffe7;
   color: black;
 }
+
 .posts {
   position: relative;
   z-index: 1;
@@ -55,7 +63,6 @@ button:hover {
   border: 1px solid #00ffe7;
   padding: 20px;
   border-radius: 10px;
-  color: #00ffe7;
   box-shadow: 0 0 10px #00ffe7;
 }
 
@@ -66,11 +73,121 @@ button:hover {
 }
 
 .post h2 {
-  font-size: 1.8em;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6em;
   margin-bottom: 10px;
+  color: #00ffe7;
 }
 
 .post p {
   font-size: 1.1em;
   line-height: 1.6;
+}
+
+.courses {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.courses h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.course {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #00ffe7;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.course h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffe7;
+  margin-bottom: 10px;
+}
+
+.course p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.course button {
+  background: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course button:hover {
+  background: #00ffe7;
+  color: black;
+}
+
+.contact {
+  position: relative;
+  z-index: 1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #00ffe7;
+  font-family: 'Orbitron', sans-serif;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #00ffe7;
+  background: black;
+  color: #e0e0e0;
+  border-radius: 5px
+  }
+
+button[type="submit"] {
+  background: transparent;
+  border: 2px solid #00ffe7;
+  color: #00ffe7;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+  background: #00ffe7;
+  color: black;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 0.9em;
+  z-index: 1;
+  position: relative;
 }
